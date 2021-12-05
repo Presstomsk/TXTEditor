@@ -20,10 +20,10 @@
             <Menu>
                 <MenuItem Header="File">
                     <MenuItem Header="Open" Click="Open_Click"></MenuItem>
-                    <MenuItem Header="Save"></MenuItem>
+                    <MenuItem Header="Save" Click="Save_Click"></MenuItem>
                     <MenuItem Header="Save As" Click="SaveAs_Click"></MenuItem>
                     <Separator />
-                    <MenuItem Header="Exit" ></MenuItem>
+                    <MenuItem Header="Exit" Click="Exit_Click"></MenuItem>
                 </MenuItem>
             </Menu>
             <Separator></Separator>
