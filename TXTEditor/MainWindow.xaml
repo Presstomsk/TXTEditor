@@ -19,7 +19,7 @@
             <Separator></Separator>
             <Menu>
                 <MenuItem Header="File">
-                    <MenuItem Header="Open"></MenuItem>
+                    <MenuItem Header="Open" Click="Open_Click"></MenuItem>
                     <MenuItem Header="Save"></MenuItem>
                     <MenuItem Header="Save As"></MenuItem>
                     <Separator />
