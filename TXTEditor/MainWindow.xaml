@@ -1,0 +1,44 @@
+﻿<Window x:Class="TXTEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TXTEditor"
+        mc:Ignorable="d"
+        Title="TXTEditor" Height="450" Width="800">
+
+    <Grid>        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <ToolBar >
+            <Button>
+                <Image Source="open-sign.png" MaxHeight="32"></Image>
+            </Button>
+            <Separator></Separator>
+            <Menu>
+                <MenuItem Header="File">
+                    <MenuItem Header="Open"></MenuItem>
+                    <MenuItem Header="Save"></MenuItem>
+                    <MenuItem Header="Save As"></MenuItem>
+                    <Separator />
+                    <MenuItem Header="Exit" ></MenuItem>
+                </MenuItem>
+            </Menu>
+            <Separator></Separator>
+            <CheckBox FontWeight="Bold">Bold</CheckBox>
+            <CheckBox FontStyle="Italic">Italic</CheckBox>
+            <CheckBox>
+                <TextBlock TextDecorations="Underline">Underline</TextBlock>
+            </CheckBox>
+            <Separator></Separator>
+            <ComboBox SelectedIndex="1">
+                <ComboBoxItem>50%</ComboBoxItem>
+                <ComboBoxItem>100%</ComboBoxItem>
+                <ComboBoxItem>150%</ComboBoxItem>
+            </ComboBox>
+        </ToolBar>
+        <TextBox Grid.Row="1" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+    </Grid>
+</Window>
