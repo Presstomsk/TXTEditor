@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,14 +17,29 @@ using System.Windows.Shapes;
 
 namespace TXTEditor
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
+        string filePath;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Open_Click(object sender, RoutedEventArgs e)
+        {
+            if(OpenFileDialog()) TextB.Text=File.ReadAllText(filePath);
+        }
+        public bool OpenFileDialog()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text Files (*.txt)|*.txt";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                filePath = openFileDialog.FileName;
+                return true;
+            }
+            return false;
         }
     }
 }
