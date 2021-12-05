@@ -17,10 +17,10 @@ using System.Windows.Shapes;
 
 namespace TXTEditor
 {
-   
+
     public partial class MainWindow : Window
     {
-        string filePath;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,18 +28,20 @@ namespace TXTEditor
 
         private void Open_Click(object sender, RoutedEventArgs e)
         {
-            if(OpenFileDialog()) TextB.Text=File.ReadAllText(filePath);
-        }
-        public bool OpenFileDialog()
-        {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Text Files (*.txt)|*.txt";
-            if (openFileDialog.ShowDialog() == true)
-            {
-                filePath = openFileDialog.FileName;
-                return true;
-            }
-            return false;
+            if (openFileDialog.ShowDialog() == true) TextB.Text = File.ReadAllText(openFileDialog.FileName);
+
         }
+
+        private void SaveAs_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text Files (*.txt)|*.txt";
+            if (saveFileDialog.ShowDialog() == true) File.WriteAllText(saveFileDialog.FileName,TextB.Text);
+
+        }
+
+
     }
 }
