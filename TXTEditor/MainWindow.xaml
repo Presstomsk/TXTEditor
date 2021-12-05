@@ -39,6 +39,6 @@
                 <ComboBoxItem>150%</ComboBoxItem>
             </ComboBox>
         </ToolBar>
-        <TextBox Grid.Row="1" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <TextBox x:Name="TextB" Grid.Row="1" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
     </Grid>
 </Window>

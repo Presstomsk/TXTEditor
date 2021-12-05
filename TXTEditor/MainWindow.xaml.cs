@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace TXTEditor
 
         private void Open_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog();
+            if(OpenFileDialog()) TextB.Text=File.ReadAllText(filePath);
         }
         public bool OpenFileDialog()
         {
