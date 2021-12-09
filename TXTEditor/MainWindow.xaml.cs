@@ -20,13 +20,12 @@ namespace TXTEditor
 
     public partial class MainWindow : Window
     {
-        string path=null;
+        string path = null;
 
         public MainWindow()
         {
             InitializeComponent();
         }
-
         private void Open_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -68,7 +67,5 @@ namespace TXTEditor
         {
             Close();
         }
-
-
     }
 }
