@@ -24,6 +24,7 @@
             </Style.Triggers>
             <Setter Property="FontSize" Value="{Binding ElementName=Font_Size, Path=SelectedValue.Content}"/>
             <Setter Property="Foreground" Value="{Binding ElementName=Color, Path=SelectedValue.Foreground}"/>
+            <Setter Property="Background" Value="{Binding ElementName=ColorBox, Path=SelectedValue.Foreground}"/>
         </Style>        
     </Window.Resources>
     <Grid>        
@@ -62,13 +63,23 @@
                 <ComboBoxItem Content="20"/>
                 <ComboBoxItem Content="22"/>
             </ComboBox>
-            <ComboBox x:Name="Color" SelectedIndex="0" >
+            <ComboBox x:Name="Color" SelectedIndex="1" >
+                <ComboBoxItem Content="White" Foreground="White"/>
                 <ComboBoxItem Content="Black" Foreground="Black"/>
                 <ComboBoxItem Content="Red" Foreground="Red"/>
                 <ComboBoxItem Content="Green" Foreground="Green"/>
                 <ComboBoxItem Content="Blue" Foreground="Blue"/>
                 <ComboBoxItem Content="Yellow" Foreground="Yellow"/>
                 <ComboBoxItem Content="Orange" Foreground="Orange"/>                
+            </ComboBox>
+            <ComboBox x:Name="ColorBox" SelectedIndex="0" >
+                <ComboBoxItem Content="White" Foreground="White"/>
+                <ComboBoxItem Content="Black" Foreground="Black"/>
+                <ComboBoxItem Content="Red" Foreground="Red"/>
+                <ComboBoxItem Content="Green" Foreground="Green"/>
+                <ComboBoxItem Content="Blue" Foreground="Blue"/>
+                <ComboBoxItem Content="Yellow" Foreground="Yellow"/>
+                <ComboBoxItem Content="Orange" Foreground="Orange"/>
             </ComboBox>
         </ToolBar>
         <TextBox x:Name="TextB" Grid.Row="1"  VerticalScrollBarVisibility="Visible" AcceptsReturn="True" />
