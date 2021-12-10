@@ -24,6 +24,7 @@
             </Style.Triggers>
             <Setter Property="FontSize" Value="{Binding ElementName=Font_Size, Path=SelectedValue.Content}"/>
             <Setter Property="Foreground" Value="{Binding ElementName=Color, Path=SelectedValue.Foreground}"/>
+            <Setter Property="Background" Value="{Binding ElementName=ColorBox, Path=SelectedValue.Foreground}"/>
         </Style>        
     </Window.Resources>
     <Grid>        
@@ -35,7 +36,7 @@
             <Button/>
             <Separator></Separator>
             <Menu>
-                <MenuItem Header="File" Background="#FFEEF5FD">
+                <MenuItem Header="File" Background="#FFEEF5FD" ToolTip="Меню">
                     <MenuItem Header="Open" Click="Open_Click"></MenuItem>
                     <MenuItem Header="Save" Click="Save_Click"></MenuItem>
                     <MenuItem Header="Save As" Click="SaveAs_Click"></MenuItem>
@@ -44,13 +45,13 @@
                 </MenuItem>
             </Menu>
             <Separator></Separator>
-            <CheckBox x:Name="Font_Weight" FontWeight="Bold" Content="B" />
-            <CheckBox x:Name="Style_Italic" FontStyle="Italic" Content="I"/>
-            <CheckBox x:Name="Underline" >
+            <CheckBox x:Name="Font_Weight" FontWeight="Bold" Content="B"  ToolTip="Жирный"/>
+            <CheckBox x:Name="Style_Italic" FontStyle="Italic" Content="I" ToolTip="Курсив"/>
+            <CheckBox x:Name="Underline" ToolTip="Подчеркивание">
                 <TextBlock TextDecorations="Underline" Text="abc"/>
             </CheckBox>
             <Separator></Separator>
-            <ComboBox x:Name="Font_Size" SelectedIndex="4" >
+            <ComboBox x:Name="Font_Size" SelectedIndex="4" ToolTip="Размер шрифта">
                 <ComboBoxItem Content="8"/>
                 <ComboBoxItem Content="9"/>
                 <ComboBoxItem Content="10"/>
@@ -62,7 +63,8 @@
                 <ComboBoxItem Content="20"/>
                 <ComboBoxItem Content="22"/>
             </ComboBox>
-            <ComboBox x:Name="Color" SelectedIndex="0" >
+            <ComboBox x:Name="Color" SelectedIndex="1" ToolTip="Цвет текста">
+                <ComboBoxItem Content="White" Foreground="White"/>
                 <ComboBoxItem Content="Black" Foreground="Black"/>
                 <ComboBoxItem Content="Red" Foreground="Red"/>
                 <ComboBoxItem Content="Green" Foreground="Green"/>
@@ -70,7 +72,16 @@
                 <ComboBoxItem Content="Yellow" Foreground="Yellow"/>
                 <ComboBoxItem Content="Orange" Foreground="Orange"/>                
             </ComboBox>
+            <ComboBox x:Name="ColorBox" SelectedIndex="0" ToolTip="Цвет фона">
+                <ComboBoxItem Content="White" Foreground="White"/>
+                <ComboBoxItem Content="Black" Foreground="Black"/>
+                <ComboBoxItem Content="Red" Foreground="Red"/>
+                <ComboBoxItem Content="Green" Foreground="Green"/>
+                <ComboBoxItem Content="Blue" Foreground="Blue"/>
+                <ComboBoxItem Content="Yellow" Foreground="Yellow"/>
+                <ComboBoxItem Content="Orange" Foreground="Orange"/>
+            </ComboBox>
         </ToolBar>
-        <TextBox x:Name="TextB" Grid.Row="1"  VerticalScrollBarVisibility="Visible" AcceptsReturn="True" />
+        <TextBox x:Name="TextB" Grid.Row="1"  VerticalScrollBarVisibility="Visible" AcceptsReturn="True" SpellCheck.IsEnabled="True" />
     </Grid>
 </Window>
