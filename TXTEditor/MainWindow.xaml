@@ -6,39 +6,82 @@
         xmlns:local="clr-namespace:TXTEditor"
         mc:Ignorable="d"
         Title="TXTEditor" Height="450" Width="800">
-
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=Font_Weight, Path=IsChecked}"
+                        Value="True">
+                    <Setter Property="FontWeight" Value="Bold"/>                    
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=Style_Italic, Path=IsChecked}"
+                        Value="True">
+                    <Setter Property="FontStyle" Value="Italic"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=Underline , Path=IsChecked}"
+                        Value="True">
+                    <Setter Property="TextDecorations" Value="Underline"/>
+                </DataTrigger>                
+            </Style.Triggers>
+            <Setter Property="FontSize" Value="{Binding ElementName=Font_Size, Path=SelectedValue.Content}"/>
+            <Setter Property="Foreground" Value="{Binding ElementName=Color, Path=SelectedValue.Foreground}"/>
+            <Setter Property="Background" Value="{Binding ElementName=ColorBox, Path=SelectedValue.Foreground}"/>
+        </Style>        
+    </Window.Resources>
     <Grid>        
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <ToolBar >
-            <Button>
-                <Image Source="open-sign.png" MaxHeight="32"></Image>
-            </Button>
+            <Button/>
             <Separator></Separator>
             <Menu>
-                <MenuItem Header="File">
-                    <MenuItem Header="Open"></MenuItem>
-                    <MenuItem Header="Save"></MenuItem>
-                    <MenuItem Header="Save As"></MenuItem>
+                <MenuItem Header="File" Background="#FFEEF5FD" ToolTip="Меню">
+                    <MenuItem Header="Open" Click="Open_Click"></MenuItem>
+                    <MenuItem Header="Save" Click="Save_Click"></MenuItem>
+                    <MenuItem Header="Save As" Click="SaveAs_Click"></MenuItem>
                     <Separator />
-                    <MenuItem Header="Exit" ></MenuItem>
+                    <MenuItem Header="Exit" Click="Exit_Click"></MenuItem>
                 </MenuItem>
             </Menu>
             <Separator></Separator>
-            <CheckBox FontWeight="Bold">Bold</CheckBox>
-            <CheckBox FontStyle="Italic">Italic</CheckBox>
-            <CheckBox>
-                <TextBlock TextDecorations="Underline">Underline</TextBlock>
+            <CheckBox x:Name="Font_Weight" FontWeight="Bold" Content="B"  ToolTip="Жирный"/>
+            <CheckBox x:Name="Style_Italic" FontStyle="Italic" Content="I" ToolTip="Курсив"/>
+            <CheckBox x:Name="Underline" ToolTip="Подчеркивание">
+                <TextBlock TextDecorations="Underline" Text="abc"/>
             </CheckBox>
             <Separator></Separator>
-            <ComboBox SelectedIndex="1">
-                <ComboBoxItem>50%</ComboBoxItem>
-                <ComboBoxItem>100%</ComboBoxItem>
-                <ComboBoxItem>150%</ComboBoxItem>
+            <ComboBox x:Name="Font_Size" SelectedIndex="4" ToolTip="Размер шрифта">
+                <ComboBoxItem Content="8"/>
+                <ComboBoxItem Content="9"/>
+                <ComboBoxItem Content="10"/>
+                <ComboBoxItem Content="11"/>
+                <ComboBoxItem Content="12"/>
+                <ComboBoxItem Content="14"/>
+                <ComboBoxItem Content="16"/>
+                <ComboBoxItem Content="18"/>
+                <ComboBoxItem Content="20"/>
+                <ComboBoxItem Content="22"/>
+            </ComboBox>
+            <ComboBox x:Name="Color" SelectedIndex="1" ToolTip="Цвет текста">
+                <ComboBoxItem Content="White" Foreground="White"/>
+                <ComboBoxItem Content="Black" Foreground="Black"/>
+                <ComboBoxItem Content="Red" Foreground="Red"/>
+                <ComboBoxItem Content="Green" Foreground="Green"/>
+                <ComboBoxItem Content="Blue" Foreground="Blue"/>
+                <ComboBoxItem Content="Yellow" Foreground="Yellow"/>
+                <ComboBoxItem Content="Orange" Foreground="Orange"/>                
+            </ComboBox>
+            <ComboBox x:Name="ColorBox" SelectedIndex="0" ToolTip="Цвет фона">
+                <ComboBoxItem Content="White" Foreground="White"/>
+                <ComboBoxItem Content="Black" Foreground="Black"/>
+                <ComboBoxItem Content="Red" Foreground="Red"/>
+                <ComboBoxItem Content="Green" Foreground="Green"/>
+                <ComboBoxItem Content="Blue" Foreground="Blue"/>
+                <ComboBoxItem Content="Yellow" Foreground="Yellow"/>
+                <ComboBoxItem Content="Orange" Foreground="Orange"/>
             </ComboBox>
         </ToolBar>
-        <TextBox Grid.Row="1" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <TextBox x:Name="TextB" Grid.Row="1"  VerticalScrollBarVisibility="Visible" AcceptsReturn="True" SpellCheck.IsEnabled="True" />
     </Grid>
 </Window>
