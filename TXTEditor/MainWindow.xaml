@@ -82,6 +82,6 @@
                 <ComboBoxItem Content="Orange" Foreground="Orange"/>
             </ComboBox>
         </ToolBar>
-        <TextBox x:Name="TextB" Grid.Row="1"  VerticalScrollBarVisibility="Visible" AcceptsReturn="True" />
+        <TextBox x:Name="TextB" Grid.Row="1"  VerticalScrollBarVisibility="Visible" AcceptsReturn="True" SpellCheck.IsEnabled="True" />
     </Grid>
 </Window>
