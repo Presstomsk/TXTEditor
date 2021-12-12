@@ -1,0 +1,111 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: TXTEditor
+  name: TXTEditor
+  href: api/TXTEditor.html
+  commentId: N:TXTEditor
+  fullName: TXTEditor
+  nameWithType: TXTEditor
+- uid: TXTEditor.App
+  name: App
+  href: api/TXTEditor.App.html
+  commentId: T:TXTEditor.App
+  fullName: TXTEditor.App
+  nameWithType: App
+- uid: TXTEditor.App.InitializeComponent
+  name: InitializeComponent()
+  href: api/TXTEditor.App.html#TXTEditor_App_InitializeComponent
+  commentId: M:TXTEditor.App.InitializeComponent
+  fullName: TXTEditor.App.InitializeComponent()
+  nameWithType: App.InitializeComponent()
+- uid: TXTEditor.App.InitializeComponent*
+  name: InitializeComponent
+  href: api/TXTEditor.App.html#TXTEditor_App_InitializeComponent_
+  commentId: Overload:TXTEditor.App.InitializeComponent
+  isSpec: "True"
+  fullName: TXTEditor.App.InitializeComponent
+  nameWithType: App.InitializeComponent
+- uid: TXTEditor.App.Main
+  name: Main()
+  href: api/TXTEditor.App.html#TXTEditor_App_Main
+  commentId: M:TXTEditor.App.Main
+  fullName: TXTEditor.App.Main()
+  nameWithType: App.Main()
+- uid: TXTEditor.App.Main*
+  name: Main
+  href: api/TXTEditor.App.html#TXTEditor_App_Main_
+  commentId: Overload:TXTEditor.App.Main
+  isSpec: "True"
+  fullName: TXTEditor.App.Main
+  nameWithType: App.Main
+- uid: TXTEditor.FileDialogues
+  name: FileDialogues
+  href: api/TXTEditor.FileDialogues.html
+  commentId: T:TXTEditor.FileDialogues
+  fullName: TXTEditor.FileDialogues
+  nameWithType: FileDialogues
+- uid: TXTEditor.FileDialogues.OpenFile(System.String@)
+  name: OpenFile(out String)
+  href: api/TXTEditor.FileDialogues.html#TXTEditor_FileDialogues_OpenFile_System_String__
+  commentId: M:TXTEditor.FileDialogues.OpenFile(System.String@)
+  name.vb: OpenFile(ByRef String)
+  fullName: TXTEditor.FileDialogues.OpenFile(out System.String)
+  fullName.vb: TXTEditor.FileDialogues.OpenFile(ByRef System.String)
+  nameWithType: FileDialogues.OpenFile(out String)
+  nameWithType.vb: FileDialogues.OpenFile(ByRef String)
+- uid: TXTEditor.FileDialogues.OpenFile*
+  name: OpenFile
+  href: api/TXTEditor.FileDialogues.html#TXTEditor_FileDialogues_OpenFile_
+  commentId: Overload:TXTEditor.FileDialogues.OpenFile
+  isSpec: "True"
+  fullName: TXTEditor.FileDialogues.OpenFile
+  nameWithType: FileDialogues.OpenFile
+- uid: TXTEditor.FileDialogues.SaveAsFile(System.String,System.String@)
+  name: SaveAsFile(String, out String)
+  href: api/TXTEditor.FileDialogues.html#TXTEditor_FileDialogues_SaveAsFile_System_String_System_String__
+  commentId: M:TXTEditor.FileDialogues.SaveAsFile(System.String,System.String@)
+  name.vb: SaveAsFile(String, ByRef String)
+  fullName: TXTEditor.FileDialogues.SaveAsFile(System.String, out System.String)
+  fullName.vb: TXTEditor.FileDialogues.SaveAsFile(System.String, ByRef System.String)
+  nameWithType: FileDialogues.SaveAsFile(String, out String)
+  nameWithType.vb: FileDialogues.SaveAsFile(String, ByRef String)
+- uid: TXTEditor.FileDialogues.SaveAsFile*
+  name: SaveAsFile
+  href: api/TXTEditor.FileDialogues.html#TXTEditor_FileDialogues_SaveAsFile_
+  commentId: Overload:TXTEditor.FileDialogues.SaveAsFile
+  isSpec: "True"
+  fullName: TXTEditor.FileDialogues.SaveAsFile
+  nameWithType: FileDialogues.SaveAsFile
+- uid: TXTEditor.MainWindow
+  name: MainWindow
+  href: api/TXTEditor.MainWindow.html
+  commentId: T:TXTEditor.MainWindow
+  fullName: TXTEditor.MainWindow
+  nameWithType: MainWindow
+- uid: TXTEditor.MainWindow.#ctor
+  name: MainWindow()
+  href: api/TXTEditor.MainWindow.html#TXTEditor_MainWindow__ctor
+  commentId: M:TXTEditor.MainWindow.#ctor
+  fullName: TXTEditor.MainWindow.MainWindow()
+  nameWithType: MainWindow.MainWindow()
+- uid: TXTEditor.MainWindow.#ctor*
+  name: MainWindow
+  href: api/TXTEditor.MainWindow.html#TXTEditor_MainWindow__ctor_
+  commentId: Overload:TXTEditor.MainWindow.#ctor
+  isSpec: "True"
+  fullName: TXTEditor.MainWindow.MainWindow
+  nameWithType: MainWindow.MainWindow
+- uid: TXTEditor.MainWindow.InitializeComponent
+  name: InitializeComponent()
+  href: api/TXTEditor.MainWindow.html#TXTEditor_MainWindow_InitializeComponent
+  commentId: M:TXTEditor.MainWindow.InitializeComponent
+  fullName: TXTEditor.MainWindow.InitializeComponent()
+  nameWithType: MainWindow.InitializeComponent()
+- uid: TXTEditor.MainWindow.InitializeComponent*
+  name: InitializeComponent
+  href: api/TXTEditor.MainWindow.html#TXTEditor_MainWindow_InitializeComponent_
+  commentId: Overload:TXTEditor.MainWindow.InitializeComponent
+  isSpec: "True"
+  fullName: TXTEditor.MainWindow.InitializeComponent
+  nameWithType: MainWindow.InitializeComponent
