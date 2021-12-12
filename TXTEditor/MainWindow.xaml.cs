@@ -9,7 +9,9 @@ namespace TXTEditor
     public partial class MainWindow : Window
     {
         string path = null;
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

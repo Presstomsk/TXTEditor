@@ -7,9 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TXTEditor
-{
+{/// <summary>
+/// Статический класс реализации openFileDialog и saveFileDialog
+/// </summary>
     public static class FileDialogues
-    {
+    {/// <summary>
+     /// Открытие txt-файла
+     /// </summary>
+     /// <param name="strPath">Путь к txt-файлу</param>
+     /// <returns>Текстовое содержимое файла</returns>
         public static string OpenFile(out string strPath)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -22,6 +28,11 @@ namespace TXTEditor
             strPath = null;
             return String.Empty;
         }
+        /// <summary>
+        /// Save As txt-файл
+        /// </summary>
+        /// <param name="str">Текст, записываемый в файл</param>
+        /// <param name="strPath">Путь к txt-файлу</param>
         public static void SaveAsFile(string str, out string strPath)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();

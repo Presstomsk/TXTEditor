@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
+	  <DocumentationFile>doc/TXTEditor_doc.xml</DocumentationFile>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
