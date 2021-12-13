@@ -1,2 +1,0 @@
-# TXTEditor documentation
-
