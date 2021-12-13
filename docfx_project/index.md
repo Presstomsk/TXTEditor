@@ -1,4 +1,4 @@
-# This is the **HOMEPAGE**.
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
-## Quick Start Notes:
-1. Add images to the *images* folder if the file is referencing an image.
+# Текстовый редактор TXTEditor.
+Графическое приложение, которое позволяет выбирать цвет фона редактора и цвет текста, размер шрифта, жирность, курсивность. Текст можно подгружать из файла и сохранять в файл.
+
+![txtreader](https://user-images.githubusercontent.com/77540319/145589226-3829b576-227a-4b03-8dd2-ad141cd14613.png)
